@@ -1,0 +1,22 @@
+version: 0.3
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+     - pip install -r requirements.txt
+
+  build:
+    commands:
+      - python app.py
+      - mkdir artifacts
+      - mv output.txt artifacts/
+
+artifacts:
+  files:
+    - artifacts/**
+  discard-paths: yes
+  base-directory: .
+  name: sample-python-app-artifacts
+  bucket-name: sample-python-app-codebuild
