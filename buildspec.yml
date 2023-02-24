@@ -9,13 +9,11 @@ phases:
 
   build:
     commands:
-      - python app.py
-      - mkdir artifacts
-      - mv output.txt artifacts/
+      - python3 setup.py sdist bdist_wheel
 
 artifacts:
   files:
-    - artifacts/**
+    - dist/*
   discard-paths: yes
   base-directory: .
   name: sample-python-app-artifacts
