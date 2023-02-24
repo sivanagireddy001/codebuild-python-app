@@ -14,7 +14,5 @@ phases:
 artifacts:
   files:
     - dist/*
-  discard-paths: yes
-  base-directory: .
   name: sample-python-app-artifacts
   bucket-name: sample-python-app-codebuild
